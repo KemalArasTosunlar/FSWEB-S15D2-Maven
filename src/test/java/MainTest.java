@@ -9,6 +9,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.instanceOf;
+
 
 import static org.hamcrest.Matchers.instanceOf;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -142,11 +145,11 @@ public class MainTest {
     @DisplayName("findUniqueWords doğru çalışıyor mu ?")
     @Test
     public void testFindUniqueWordsMethod() {
-        assertEquals(StringSet.findUniqueWords().size(), 143);
+        assertEquals(StringSet.findUniqueWords().size(), 149);
 
         List<String> results = StringSet.findUniqueWords().stream().collect(Collectors.toList());
-        assertEquals(results.get(0), "a");
-        assertEquals(results.get(results.size()-1), "wrote");
+        assertEquals(results.get(0), "gift");
+        assertEquals(results.get(results.size()-1), "illustrator");
 
     }
 }
